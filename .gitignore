@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+Thumbs.db
+# Dependencies
+node_modules/
+# Local agent/editor config
+.claude/settings.local.json
+# Leftover build artifact
+assets/logo-datauri.txt
