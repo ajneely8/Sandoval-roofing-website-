@@ -47,13 +47,6 @@ body{
   text-rendering:optimizeLegibility;
   overflow-x:hidden;
 }
-/* dark concrete texture layered subtly over the whole site */
-body::after{
-  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
-  background:var(--concrete-fine),var(--concrete-coarse);
-  background-size:220px 220px,620px 620px;
-  opacity:.42;mix-blend-mode:normal;
-}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:var(--h-font);color:var(--ink);line-height:1.05;margin:0;font-weight:600;letter-spacing:.2px;overflow-wrap:break-word}
@@ -303,6 +296,14 @@ section{position:relative}
 .marquee-bar .mi svg{width:20px;height:20px;color:var(--panel)}
 
 /* ============ ABOUT ============ */
+/* concrete-texture backdrop scoped to the About section only */
+.about{background:#26282c}
+.about::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:var(--concrete-fine),var(--concrete-coarse);
+  background-size:220px 220px,620px 620px;opacity:.5;
+}
+.about>.wrap{position:relative;z-index:1}
 .about__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .about__media{position:relative}
 .about__media img,.about__media video{border-radius:var(--radius);box-shadow:var(--shadow-lg);aspect-ratio:4/3.4;object-fit:cover;width:100%;display:block}
