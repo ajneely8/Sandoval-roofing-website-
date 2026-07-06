@@ -34,7 +34,7 @@
       <nav class="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#systems">Systems</a>
+        <span class="nav__item nav__item--drop"><button type="button" class="nav__drophead">Systems</button><div class="nav__drop"><a href="residential-systems.html">Residential Systems</a><a href="commercial-systems.html">Commercial Systems</a></div></span>
         <span class="nav__item nav__item--drop"><button type="button" class="nav__drophead">Our Work</button><div class="nav__drop"><a href="#projects">Commercial Projects</a><a href="#residential">Residential Projects</a></div></span>
         <a href="#why">Why Us</a>
         <a href="#areas">Areas</a>
@@ -60,7 +60,11 @@
     </button>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#systems">Systems</a>
+    <button type="button" class="drawer__acc" aria-expanded="false" aria-controls="drawerSystems">Systems</button>
+    <div class="drawer__panel" id="drawerSystems">
+      <a href="residential-systems.html" class="drawer__sub">Residential Systems</a>
+      <a href="commercial-systems.html" class="drawer__sub">Commercial Systems</a>
+    </div>
     <button type="button" class="drawer__acc" aria-expanded="false" aria-controls="drawerWork">Our Work</button>
     <div class="drawer__panel" id="drawerWork">
       <a href="#projects" class="drawer__sub">Commercial Projects</a>
@@ -185,117 +189,6 @@
           <a class="card__link" href="services/coatings.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </article>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ ROOFING SYSTEMS ============ -->
-  <section class="pad" id="systems">
-    <div class="wrap">
-      <div style="text-align:center;max-width:700px;margin:0 auto" class="reveal">
-        <span class="eyebrow" style="justify-content:center">What We Install</span>
-        <h2 class="section-title">Roofing Systems We Install</h2>
-        <p class="lead" style="margin:14px auto 0">From asphalt shingles to commercial single-ply membranes — the full range of residential and low-slope systems, installed to manufacturer spec.</p>
-      </div>
-
-      <!-- Residential -->
-      <h3 class="sysgroup reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4l9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
-        Residential Roofing Systems
-      </h3>
-      <div class="sysgrid">
-        <article class="syscard reveal">
-          <div class="sysimg"><img src="assets/systems/asphalt-shingles.jpg" alt="Asphalt shingle roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">3-Tab · Architectural · Luxury</span><h4>Asphalt Shingles</h4><p>Most common and cost-effective; 20–30+ year options; wide color selection; good wind and impact ratings available.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="1">
-          <div class="sysimg"><img src="assets/systems/metal-roofing.jpg" alt="Metal roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Standing Seam · Metal Shingles</span><h4>Metal Roofing</h4><p>Long lifespan 40–70+ years; high wind and hail resistance; energy efficient; low maintenance; great for snow shedding.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="2">
-          <div class="sysimg"><img src="assets/systems/tile-roofing.jpg" alt="Tile roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Concrete · Clay</span><h4>Tile Roofing</h4><p>Premium curb appeal; very long life; excellent fire resistance; heavier structure requirements; broad profiles and colors.</p></div>
-        </article>
-        <article class="syscard reveal">
-          <div class="sysimg"><img src="assets/systems/slate-roofing.jpg" alt="Slate roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Natural · Synthetic</span><h4>Slate Roofing</h4><p>Historic look; 75–100+ year lifespan (natural); high fire and weather resistance; requires skilled installation and proper framing.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="1">
-          <div class="sysimg"><img src="assets/systems/wood-shakes.jpg" alt="Wood shake roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Cedar</span><h4>Wood Shakes &amp; Shingles</h4><p>Warm, natural aesthetic; good insulation; requires periodic maintenance; local fire code considerations apply.</p></div>
-        </article>
-      </div>
-
-      <!-- Low-slope & commercial -->
-      <h3 class="sysgroup reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg>
-        Low-Slope &amp; Commercial Systems
-      </h3>
-      <div class="sysgrid">
-        <article class="syscard reveal">
-          <div class="sysimg"><img src="assets/systems/tpo.jpg" alt="TPO single-ply roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Single-Ply</span><h4>TPO Membrane</h4><p>White reflective membrane; energy efficient; heat-welded seams; popular for new construction and retrofits.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="1">
-          <div class="sysimg"><img src="assets/systems/pvc.jpg" alt="PVC single-ply roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Single-Ply</span><h4>PVC Membrane</h4><p>Excellent chemical and grease resistance; heat-welded seams; ideal for restaurants and industrial roofs.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="2">
-          <div class="sysimg"><img src="assets/systems/epdm.jpg" alt="EPDM single-ply roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Single-Ply</span><h4>EPDM Membrane</h4><p>Proven black rubber membrane; durable and flexible; a strong choice for ballasted or fully adhered systems.</p></div>
-        </article>
-        <article class="syscard reveal">
-          <div class="sysimg"><img src="assets/systems/modified-bitumen.jpg" alt="Modified bitumen roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">SBS / APP</span><h4>Modified Bitumen</h4><p>Multi-ply asphalt-based system; great puncture resistance; torch, cold-applied, or self-adhered options.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="1">
-          <div class="sysimg"><img src="assets/systems/built-up-roofing.jpg" alt="Built-up roofing" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">BUR</span><h4>Built-Up Roofing</h4><p>Multiple asphalt and felt plies with gravel or cap sheet; time-tested durability and redundancy.</p></div>
-        </article>
-        <article class="syscard reveal" data-d="2">
-          <div class="sysimg"><img src="assets/systems/coatings.jpg" alt="Roof coatings" loading="lazy" onerror="this.remove()"><span class="sysimg__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5L5 20"/></svg>Add Photo</span></div>
-          <div class="syscard__body"><span class="syscard__tag">Acrylic · Silicone · Polyurethane</span><h4>Roof Coatings</h4><p>Restore and extend roof life; improve reflectivity; cost-effective over sound substrates.</p></div>
-        </article>
-      </div>
-
-      <!-- Accessories & specialty -->
-      <h3 class="sysgroup reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1z"/></svg>
-        Accessories &amp; Specialty
-      </h3>
-      <div class="sysextras">
-        <div class="sysx reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-2 5H5L3 7z"/><path d="M6 12v5a2 2 0 0 0 2 2h1"/></svg><div><b>Gutters &amp; Downspouts</b><span>Seamless aluminum, steel, copper.</span></div></div>
-        <div class="sysx reveal" data-d="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg><div><b>Skylights &amp; Sun Tunnels</b><span>New and replacement.</span></div></div>
-        <div class="sysx reveal" data-d="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18M5 5l14 14M19 5 5 19"/></svg><div><b>Roof Ventilation</b><span>Ridge, intake, powered.</span></div></div>
-        <div class="sysx reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 12h16M4 16h16M4 4h16"/></svg><div><b>Insulation &amp; Taper Systems</b><span>Upgrades and tapered insulation.</span></div></div>
-        <div class="sysx reveal" data-d="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1z"/></svg><div><b>Repairs &amp; Maintenance</b><span>Repairs, inspections &amp; preventive programs.</span></div></div>
-        <div class="sysx reveal" data-d="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Storm &amp; Insurance Support</b><span>Damage assessment &amp; claim support.</span></div></div>
-      </div>
-
-      <!-- Options to tailor -->
-      <h3 class="sysgroup reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
-        Options to Tailor
-      </h3>
-      <div class="sysopts">
-        <div class="sysopt reveal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <h5>Warranties</h5><p>Manufacturer product warranties (20–35 year, limited lifetime) and NDL / system warranties where eligible.</p>
-        </div>
-        <div class="sysopt reveal" data-d="1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 7h5l-3 7"/><path d="M3 12a9 9 0 0 1 9-9M21 12a9 9 0 0 1-9 9"/></svg>
-          <h5>Impact &amp; Wind</h5><p>Class 3/4 impact ratings and 110–130+ mph wind performance.</p>
-        </div>
-        <div class="sysopt reveal" data-d="2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="16" cy="10" r="1.2" fill="currentColor"/><circle cx="12" cy="15" r="1.2" fill="currentColor"/></svg>
-          <h5>Colors &amp; Finishes</h5><p>Architectural palettes, matte and standing-seam colors, specialty metals (aluminum, steel, copper).</p>
-        </div>
-        <div class="sysopt reveal" data-d="3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
-          <h5>Sustainability</h5><p>Cool-roof finishes, recycled content, and solar-ready details.</p>
-        </div>
-      </div>
-
-      <p class="gallery__note">Photo slots show an “Add Photo” placeholder until you add images. Drop your photos into <code>assets/systems/</code> using the filenames listed and they appear automatically.</p>
     </div>
   </section>
 

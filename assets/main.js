@@ -59,16 +59,16 @@
     if(drawer) drawer.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", closeDrawer); });
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeDrawer(); });
 
-    /* ---- drawer "Our Work" accordion (tap to reveal project options) ---- */
-    var acc = drawer ? drawer.querySelector(".drawer__acc") : null;
-    if(acc){
+    /* ---- drawer accordions (Our Work, Systems — tap to reveal sub-options) ---- */
+    var accs = drawer ? drawer.querySelectorAll(".drawer__acc") : [];
+    accs.forEach(function(acc){
       var accPanel = document.getElementById(acc.getAttribute("aria-controls"));
       acc.addEventListener("click", function(){
         var expanded = acc.getAttribute("aria-expanded") === "true";
         acc.setAttribute("aria-expanded", expanded ? "false" : "true");
         if(accPanel) accPanel.classList.toggle("open", !expanded);
       });
-    }
+    });
 
     /* ---- reveal on scroll ---- */
     var els = document.querySelectorAll(".reveal");
