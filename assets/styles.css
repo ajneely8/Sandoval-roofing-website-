@@ -409,7 +409,8 @@ section{position:relative}
 .lb__stage{position:relative;width:min(1400px,95vw);height:88vh}
 .lb__stage img{width:100%;height:100%;object-fit:contain;display:block;border-radius:8px}
 .lb__cap{position:absolute;left:0;right:0;bottom:0;text-align:center;color:#fff;font-family:var(--h-font);text-transform:uppercase;letter-spacing:1.5px;font-size:.95rem;padding:26px 16px 16px;text-shadow:0 1px 8px rgba(0,0,0,.85)}
-.lb__close,.lb__prev,.lb__next{position:fixed;z-index:12;background:rgba(10,32,56,.72);border:1px solid rgba(255,255,255,.28);color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;font-family:var(--h-font);font-size:1.6rem;line-height:1;display:grid;place-items:center;transition:background .2s;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.lb__close,.lb__prev,.lb__next{position:fixed;z-index:20;background:var(--royal);border:2px solid #fff;color:#fff;width:58px;height:58px;border-radius:50%;cursor:pointer;font-family:var(--h-font);font-size:1.9rem;line-height:1;display:grid;place-items:center;transition:transform .15s var(--ease),background .2s;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.lb__close:hover,.lb__prev:hover,.lb__next:hover{background:var(--panel);transform:scale(1.08)}
 .lb__close:hover,.lb__prev:hover,.lb__next:hover{background:rgba(255,255,255,.24)}
 .lb__close{top:20px;right:22px}
 .lb__prev{left:22px;top:50%;transform:translateY(-50%)}

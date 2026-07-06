@@ -213,6 +213,13 @@
         else if(e.key === "ArrowRight") next();
         else if(e.key === "ArrowLeft") prev();
       });
+      // swipe navigation (touch devices)
+      var tx = 0, ty = 0;
+      lb.addEventListener("touchstart", function(e){ tx = e.changedTouches[0].clientX; ty = e.changedTouches[0].clientY; }, {passive:true});
+      lb.addEventListener("touchend", function(e){
+        var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+        if(Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)){ if(dx < 0) next(); else prev(); }
+      }, {passive:true});
     })();
 
     /* ---- quote form ---- */
