@@ -297,11 +297,11 @@ section{position:relative}
 
 /* ============ ABOUT ============ */
 /* concrete-texture backdrop scoped to the About section only */
-.about{background:#26282c}
+.about{background:#131417}
 .about::before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background:var(--concrete-fine),var(--concrete-coarse);
-  background-size:220px 220px,620px 620px;opacity:.5;
+  background-size:220px 220px,620px 620px;opacity:.34;
 }
 .about>.wrap{position:relative;z-index:1}
 .about__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
