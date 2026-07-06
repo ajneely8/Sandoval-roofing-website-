@@ -180,11 +180,11 @@
             more.split(",").forEach(function(p){ p = p.trim(); if(p) photos.push(p); });
             render(); return;
           }
-          // Otherwise auto-discover NAME-2.jpg ... NAME-6.jpg in the same folder
+          // Otherwise auto-discover NAME-2.jpg ... NAME-16.jpg in the same folder
           var m = main.match(/^(.*)\.(jpg|jpeg|png|webp)$/i);
           if(!m) return;
           var pending = 0, extras = {};
-          for(var i = 2; i <= 6; i++){
+          for(var i = 2; i <= 16; i++){
             (function(n){
               pending++;
               var url = m[1] + "-" + n + "." + m[2];
@@ -197,7 +197,7 @@
           function done(){
             pending--;
             if(pending !== 0 || mySession !== session) return;
-            for(var n = 2; n <= 6; n++){ if(extras[n]) photos.push(extras[n]); }
+            for(var n = 2; n <= 16; n++){ if(extras[n]) photos.push(extras[n]); }
             render();
           }
         });
