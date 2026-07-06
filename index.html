@@ -35,7 +35,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#systems">Systems</a>
-        <a href="#work">Our Work</a>
+        <span class="nav__item nav__item--drop"><button type="button" class="nav__drophead">Our Work</button><div class="nav__drop"><a href="#projects">Commercial Projects</a><a href="#residential">Residential Projects</a></div></span>
         <a href="#why">Why Us</a>
         <a href="#areas">Areas</a>
         <a href="#contact">Contact</a>
@@ -61,7 +61,11 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#systems">Systems</a>
-    <a href="#work">Our Work</a>
+    <button type="button" class="drawer__acc" aria-expanded="false" aria-controls="drawerWork">Our Work</button>
+    <div class="drawer__panel" id="drawerWork">
+      <a href="#projects" class="drawer__sub">Commercial Projects</a>
+      <a href="#residential" class="drawer__sub">Residential Projects</a>
+    </div>
     <a href="#why">Why Us</a>
     <a href="#areas">Service Areas</a>
     <a href="#contact">Contact</a>
@@ -122,8 +126,8 @@
           <source src="assets/about-team.mp4" type="video/mp4" />
         </video>
         <div class="about__badge">
-          <b data-count="25" data-suffix="+">25+</b>
-          <span>Years of Roofing</span>
+          <b style="font-size:1.5rem">Family<br>Owned</b>
+          <span>&amp; Operated in Texas</span>
         </div>
       </div>
       <div class="about__copy reveal" data-d="1">
@@ -155,42 +159,36 @@
       <div class="cards">
         <!-- 1 -->
         <article class="card reveal">
-          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4l9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
           <h3>New Construction</h3>
           <p>Precision roofing systems for new residential and commercial builds — engineered for durability and code-perfect from day one.</p>
           <a class="card__link" href="services/new-construction.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </article>
         <!-- 2 -->
         <article class="card reveal" data-d="1">
-          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></div>
           <h3>Roof Inspections</h3>
           <p>Thorough, no-pressure inspections that catch small problems before they become expensive ones — perfect for buyers, sellers &amp; claims.</p>
           <a class="card__link" href="services/inspections.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </article>
         <!-- 3 -->
         <article class="card reveal" data-d="2">
-          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1z"/></svg></div>
           <h3>Maintenance</h3>
           <p>Scheduled tune-ups, sealing, and gutter care that extend the life of your roof and keep your warranty intact season after season.</p>
           <a class="card__link" href="services/maintenance.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </article>
         <!-- 4 -->
         <article class="card reveal">
-          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div>
           <h3>Roof Repair</h3>
           <p>Fast, reliable repairs for leaks, missing shingles, and storm damage — restoring your roof's integrity before the next Texas downpour.</p>
           <a class="card__link" href="services/repair.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </article>
         <!-- 5 -->
         <article class="card reveal" data-d="1">
-          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4l9 8"/><path d="M5 10v10h14V10"/><path d="m9 15 2 2 4-4"/></svg></div>
           <h3>Roof Replacement</h3>
           <p>Full tear-off and replacement with premium shingle, metal, and tile systems — a brand-new roof that adds value and lasting protection.</p>
           <a class="card__link" href="services/replacement.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </article>
         <!-- 6 -->
         <article class="card reveal" data-d="2">
-          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v9a3 3 0 1 1-3-3h9"/><path d="M15 6h6"/></svg></div>
           <h3>Coatings &amp; Restoration</h3>
           <p>Energy-efficient roof coatings and restoration that seal, reflect heat, and extend the service life of commercial and flat roofs.</p>
           <a class="card__link" href="services/coatings.html">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -290,7 +288,7 @@
       <div class="sysopts">
         <div class="sysopt reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <h5>Warranties</h5><p>Manufacturer product warranties (20–50 year, limited lifetime) and NDL / system warranties where eligible.</p>
+          <h5>Warranties</h5><p>Manufacturer product warranties (20–35 year, limited lifetime) and NDL / system warranties where eligible.</p>
         </div>
         <div class="sysopt reveal" data-d="1">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 7h5l-3 7"/><path d="M3 12a9 9 0 0 1 9-9M21 12a9 9 0 0 1-9 9"/></svg>
@@ -310,94 +308,158 @@
     </div>
   </section>
 
-  <!-- ============ OUR WORK (GALLERY) ============ -->
-  <section class="pad" id="work">
+  <!-- ============ COMMERCIAL PROJECTS ============ -->
+  <section class="pad services" id="projects">
     <div class="wrap">
-      <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
-        <span class="eyebrow" style="justify-content:center">Our Work</span>
-        <h2 class="section-title">Roofs We're Proud Of</h2>
-        <p class="lead" style="margin:14px auto 0">A look at the range of residential and commercial roofing systems we design, install, and restore across South Texas.</p>
+      <div style="text-align:center;max-width:680px;margin:0 auto" class="reveal">
+        <span class="eyebrow" style="justify-content:center">Commercial Projects</span>
+        <h2 class="section-title">Recent Commercial Work</h2>
+        <p class="lead" style="margin:14px auto 0">Real projects across Texas — churches, community centers, restaurants, fire stations, and industrial facilities we've roofed.</p>
       </div>
-      <div class="gallery reveal" data-d="1">
-        <figure class="gallery__item gallery__tall">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/project-residential.jpg" aria-label="Architectural shingle roof installation">
-            <source src="assets/work-residential.mp4" type="video/mp4" />
+      <div class="proj-featured reveal">
+        <figure class="proj-feat">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/projects/penske-laredo.jpg" aria-label="Commercial metal roofing project">
+            <source src="assets/projects/feature-1.mp4" type="video/mp4" />
           </video>
-          <figcaption class="gallery__cap"><b>Residential Shingle</b><span>Architectural shingle installation</span></figcaption>
+          <figcaption class="proj-feat__cap"><b>Commercial Metal Roofing</b><span>Recent standing-seam project</span></figcaption>
         </figure>
-        <figure class="gallery__item">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-roofs.jpg" aria-label="Aerial view of a tile-roof neighborhood">
-            <source src="assets/work-tile.mp4" type="video/mp4" />
+        <figure class="proj-feat">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/projects/st-jude-church.jpg" aria-label="Commercial roof installation">
+            <source src="assets/projects/feature-2.mp4" type="video/mp4" />
           </video>
-          <figcaption class="gallery__cap"><b>Tile Roofing</b><span>Full neighborhood tile systems</span></figcaption>
+          <figcaption class="proj-feat__cap"><b>On-Site Installation</b><span>Our crews at work</span></figcaption>
         </figure>
-        <figure class="gallery__item">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/project-metal.jpg" aria-label="Standing-seam metal roofing">
-            <source src="assets/work-metal.mp4" type="video/mp4" />
+        <figure class="proj-feat">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/projects/feature-3-poster.jpg" aria-label="Health Texas commercial roofing project">
+            <source src="assets/projects/feature-3.mp4" type="video/mp4" />
           </video>
-          <figcaption class="gallery__cap"><b>Standing-Seam Metal</b><span>Durable metal roofing</span></figcaption>
+          <figcaption class="proj-feat__cap"><b>Health Texas Clinic</b><span>Commercial roof &amp; canopy</span></figcaption>
         </figure>
-        <figure class="gallery__item">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/project-commercial.jpg" aria-label="Commercial new build roofing">
-            <source src="assets/work-commercial.mp4" type="video/mp4" />
+        <figure class="proj-feat">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/projects/feature-4-poster.jpg" aria-label="Commercial facility roofing project">
+            <source src="assets/projects/feature-4.mp4" type="video/mp4" />
           </video>
-          <figcaption class="gallery__cap"><b>Commercial New Build</b><span>Low-slope commercial roofing</span></figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <img src="assets/team-consult.jpg" alt="Sandoval Roofing team consulting on a project site" loading="lazy" />
-          <figcaption class="gallery__cap"><b>Expert Crews</b><span>Certified, on-site project leads</span></figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/work-slate.jpg" aria-label="Natural slate roof on a luxury stone home">
-            <source src="assets/work-slate.mp4" type="video/mp4" />
-          </video>
-          <figcaption class="gallery__cap"><b>Slate Roofing</b><span>Natural slate craftsmanship</span></figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/work-cedar.jpg" aria-label="Cedar shake roof on a craftsman-style home">
-            <source src="assets/work-cedar.mp4" type="video/mp4" />
-          </video>
-          <figcaption class="gallery__cap"><b>Cedar Shake</b><span>Warm cedar shake roofing</span></figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/work-repair.jpg" aria-label="Roof repair and storm-damage restoration in progress">
-            <source src="assets/work-repair.mp4" type="video/mp4" />
-          </video>
-          <figcaption class="gallery__cap"><b>Storm Repair</b><span>Damage restoration &amp; repair</span></figcaption>
+          <figcaption class="proj-feat__cap"><b>Commercial Facility</b><span>Membrane roof system</span></figcaption>
         </figure>
       </div>
-      <p class="gallery__note">Representative work shown. Swap in your own project photos anytime — replace the images in the <code>assets/</code> folder.</p>
+      <div class="projects reveal">
+        <figure class="gallery__item">
+          <img src="assets/projects/st-jude-church.jpg" alt="Patina-green standing-seam metal roof on St. Jude Church" loading="lazy" />
+          <figcaption class="gallery__cap"><b>St. Jude Church</b><span>Standing-seam metal roof</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/joe-ward-community-center.jpg" alt="Metal roof on the Joe Ward Community Center" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Joe Ward Community Center</b><span>Metal roof system</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/kenedy-field-house.jpg" alt="Commercial metal roofing at the Kenedy Field House" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Kenedy Field House</b><span>Commercial metal roofing</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/penske-laredo.jpg" alt="Industrial metal roof restoration at Penske, Laredo" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Penske — Laredo</b><span>Industrial metal roof</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/smokehouse.jpg" alt="New roof and awning on a smokehouse restaurant" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Bar-B-Cutie Smokehouse</b><span>New roof &amp; awning</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/fire-station.jpg" alt="Roofing project on a municipal fire station" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Fire Station</b><span>Municipal roofing</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESIDENTIAL PROJECTS ============ -->
+  <section class="pad" id="residential">
+    <div class="wrap">
+      <div style="text-align:center;max-width:680px;margin:0 auto" class="reveal">
+        <span class="eyebrow" style="justify-content:center">Residential Projects</span>
+        <h2 class="section-title">Recent Residential Work</h2>
+        <p class="lead" style="margin:14px auto 0">Homes across the Texas Hill Country and beyond — standing-seam metal, architectural shingle, and full roof restorations.</p>
+      </div>
+      <div class="projects reveal">
+        <figure class="gallery__item">
+          <img src="assets/projects/ramirez-residence.jpg" alt="Standing-seam metal roof on the Ramirez residence" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Ramirez Residence</b><span>Standing-seam metal roof</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/hill-country-ranch.jpg" alt="Metal roof installation on a Hill Country stone ranch home" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Hill Country Ranch</b><span>Standing-seam metal roof</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/stone-home-shingle.jpg" alt="Architectural shingle roof on a stone home" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Stone Home</b><span>Architectural shingle roof</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/charcoal-metal-roof.jpg" alt="Aerial view of a charcoal standing-seam metal roof" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Charcoal Metal Roof</b><span>Standing-seam installation</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/historic-farmhouse.jpg" alt="Metal roof on a restored historic farmhouse" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Historic Farmhouse</b><span>Metal roof restoration</span></figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/projects/hill-country-estate.jpg" alt="Metal roof system on a Hill Country estate with pool" loading="lazy" />
+          <figcaption class="gallery__cap"><b>Hill Country Estate</b><span>Metal roof system</span></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
   <!-- ============ WHY ============ -->
   <section class="pad why" id="why">
-    <div class="wrap why__grid">
-      <div class="reveal">
-        <span class="eyebrow" style="color:var(--panel)">Why Sandoval</span>
-        <h2 class="section-title">Built on Trust,<br>Backed by Quality</h2>
-        <p class="lead">We're not the biggest roofing company in San Antonio — we're the one that shows up, communicates clearly, and delivers work we're proud to put our name on.</p>
-        <div style="margin-top:28px">
-          <a class="btn btn--panel" href="#contact">Schedule Your Estimate</a>
-        </div>
+    <div class="wrap">
+      <div style="text-align:center;max-width:680px;margin:0 auto" class="reveal">
+        <span class="eyebrow" style="color:var(--panel);justify-content:center">Why Sandoval</span>
+        <h2 class="section-title">Built on Trust, Backed by Quality</h2>
+        <p class="lead" style="margin:14px auto 0">One accountable partner for commercial and residential roofing across Texas — owners involved from pre-bid to close-out.</p>
       </div>
-      <div class="why__list">
+      <div class="why__grid2">
+        <div class="feat reveal">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>Statewide Coverage, Local Response</h4><p>Crews across Texas for fast mobilization — minimizing downtime on active facilities and speeding schedules for homeowners.</p></div>
+        </div>
+        <div class="feat reveal" data-d="1">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><h4>Family-Owned Accountability</h4><p>Owners involved from pre-bid to close-out; clear communication, clean jobsites, and follow-through after the check clears.</p></div>
+        </div>
+        <div class="feat reveal">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M19 21V11a2 2 0 0 0-2-2h-2"/><path d="M9 7h2M9 11h2M9 15h2"/></svg></div>
+          <div><h4>Commercial &amp; Residential Expertise</h4><p>One partner for TPO/PVC/EPDM, modified bitumen, BUR, metal, and coatings — plus shingles, metal, tile, and slate on homes.</p></div>
+        </div>
         <div class="feat reveal" data-d="1">
           <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-          <div><h4>Licensed &amp; Insured</h4><p>Fully licensed and insured for your total peace of mind on every residential and commercial project.</p></div>
+          <div><h4>Safety-First Operations</h4><p>OSHA-focused program, site-specific plans, daily JHAs, lift/fall protection, and documented close-outs.</p></div>
         </div>
-        <div class="feat reveal" data-d="2">
-          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
-          <div><h4>Certified Installers</h4><p>Factory-certified crews trained on GAF, Berridge, Mule-Hide and more — so your warranty is rock solid.</p></div>
+        <div class="feat reveal">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></div>
+          <div><h4>Manufacturer-Trained Quality</h4><p>Installations to spec with eligibility for 20–30 year system / NDL warranties on approved commercial systems.</p></div>
         </div>
-        <div class="feat reveal" data-d="3">
-          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg></div>
-          <div><h4>On-Time, On-Budget</h4><p>Clear timelines, honest pricing, and no surprises — we respect your property and your schedule.</p></div>
+        <div class="feat reveal" data-d="1">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1z"/></svg></div>
+          <div><h4>In-House Sheet Metal</h4><p>Custom flashings, edge metal, and gutters fabricated to detail for better fit, speed, and leak protection.</p></div>
         </div>
-        <div class="feat reveal" data-d="4">
-          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <div><h4>Real Communication</h4><p>A dedicated point of contact who answers the phone and keeps you informed from estimate to cleanup.</p></div>
+        <div class="feat reveal">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
+          <div><h4>Transparent Project Management</h4><p>Dedicated PM / superintendent, schedule tracking, photo reports, and clear change-order management.</p></div>
         </div>
+        <div class="feat reveal" data-d="1">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
+          <div><h4>Lifecycle Value</h4><p>Leak diagnostics, preventive maintenance, and coating / restoration options to extend service life and control total cost.</p></div>
+        </div>
+        <div class="feat reveal">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div><h4>Emergency Readiness</h4><p>Storm-response teams for rapid temporary dry-ins, assessments, and insurance documentation.</p></div>
+        </div>
+        <div class="feat reveal" data-d="1">
+          <div class="feat__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+          <div><h4>Proven Results</h4><p>References across retail, industrial, multifamily, public sector, and single-family projects.</p></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:44px" class="reveal">
+        <a class="btn btn--panel" href="#contact">Schedule Your Estimate</a>
       </div>
     </div>
   </section>
@@ -448,20 +510,19 @@
       </div>
       <div class="team">
         <div class="tmember reveal">
-          <div class="tmember__av"><img src="assets/team/juan.jpg" alt="Juan" loading="lazy" onerror="this.remove()">J</div>
-          <h4>Juan</h4><span>Team Member</span>
+          <div class="tmember__av"><img src="assets/team/juan-jr.jpg" alt="Juan Sandoval Jr." loading="lazy" onerror="this.remove()">JS</div>
+          <h4>Juan Sandoval Jr.</h4>
+          <a class="tmember__email" href="mailto:sandovalroofs@gmail.com">sandovalroofs@gmail.com</a>
         </div>
         <div class="tmember reveal" data-d="1">
-          <div class="tmember__av"><img src="assets/team/maria.jpg" alt="Maria" loading="lazy" onerror="this.remove()">M</div>
-          <h4>Maria</h4><span>Team Member</span>
+          <div class="tmember__av"><img src="assets/team/maria.jpg" alt="Maria Sandoval" loading="lazy" onerror="this.remove()">MS</div>
+          <h4>Maria Sandoval</h4>
+          <a class="tmember__email" href="mailto:sandovalroofing1@gmail.com">sandovalroofing1@gmail.com</a>
         </div>
         <div class="tmember reveal" data-d="2">
-          <div class="tmember__av"><img src="assets/team/juan-jr.jpg" alt="Juan Jr." loading="lazy" onerror="this.remove()">JJ</div>
-          <h4>Juan Jr.</h4><span>Team Member</span>
-        </div>
-        <div class="tmember reveal" data-d="3">
-          <div class="tmember__av"><img src="assets/team/giovanni.jpg" alt="Giovanni" loading="lazy" onerror="this.remove()">G</div>
-          <h4>Giovanni</h4><span>Team Member</span>
+          <div class="tmember__av"><img src="assets/team/giovanni.jpg" alt="Giovanni Sandoval" loading="lazy" onerror="this.remove()">GS</div>
+          <h4>Giovanni Sandoval</h4>
+          <a class="tmember__email" href="mailto:sandovalroofsinc@gmail.com">sandovalroofsinc@gmail.com</a>
         </div>
       </div>
     </div>
@@ -484,32 +545,14 @@
   <!-- ============ TESTIMONIALS ============ -->
   <section class="pad section-navy" id="testimonials">
     <div class="wrap">
-      <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
+      <div style="text-align:center;max-width:660px;margin:0 auto" class="reveal">
         <span class="eyebrow" style="justify-content:center">Reviews</span>
-        <h2 class="section-title">What Our Customers Say</h2>
-      </div>
-      <div class="quotes">
-        <figure class="quote reveal">
-          <div class="quote__stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          </div>
-          <blockquote><p>"Sandoval replaced our roof after a hailstorm and made the insurance process painless. The crew was on time, professional, and left our yard spotless. Couldn't recommend them more."</p></blockquote>
-          <figcaption class="quote__by"><span class="quote__av">M</span><span><b>Maria G.</b><span>San Antonio, TX</span></span></figcaption>
-        </figure>
-        <figure class="quote reveal" data-d="1">
-          <div class="quote__stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          </div>
-          <blockquote><p>"We used Sandoval for a new commercial build and the quality was outstanding. Clear communication from estimate to final walkthrough. This is how a roofing company should operate."</p></blockquote>
-          <figcaption class="quote__by"><span class="quote__av">J</span><span><b>James R.</b><span>New Braunfels, TX</span></span></figcaption>
-        </figure>
-        <figure class="quote reveal" data-d="2">
-          <div class="quote__stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 15 8l7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-          </div>
-          <blockquote><p>"Honest, fair pricing and real craftsmanship. They fixed a leak two other companies couldn't figure out. My go-to roofer in South Texas from now on."</p></blockquote>
-          <figcaption class="quote__by"><span class="quote__av">D</span><span><b>Diana P.</b><span>Schertz, TX</span></span></figcaption>
-        </figure>
+        <h2 class="section-title">Word Gets Around</h2>
+        <p class="lead" style="margin:16px auto 0;color:#c3d0de">A lot of our work comes from referrals and repeat customers across San Antonio and South Texas. See what people are saying — or reach out and find out for yourself.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+          <a class="btn btn--panel" href="https://www.google.com/search?q=Sandoval+Roofing+Services+Inc+San+Antonio+TX+reviews" target="_blank" rel="noopener">See Us on Google</a>
+          <a class="btn btn--ghost" href="#contact">Get a Free Estimate</a>
+        </div>
       </div>
     </div>
   </section>
@@ -519,17 +562,17 @@
     <div class="wrap areas__grid">
       <div class="reveal">
         <span class="eyebrow">Where We Work</span>
-        <h2 class="section-title">Serving San Antonio &amp; South Texas</h2>
-        <p class="lead" style="margin-top:14px">Proudly protecting homes and businesses across the greater San Antonio metro and surrounding communities.</p>
+        <h2 class="section-title">Serving All of Texas</h2>
+        <p class="lead" style="margin-top:14px">From the Hill Country to the Gulf Coast and DFW to the border — our crews mobilize fast for residential and commercial roofing projects statewide.</p>
         <div class="chips">
           <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> San Antonio</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Houston</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Dallas–Fort Worth</span>
           <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> New Braunfels</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Schertz</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Converse</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Boerne</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seguin</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Helotes</span>
-          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Universal City</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> San Marcos</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Corpus Christi</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> &amp; Statewide</span>
         </div>
       </div>
       <div class="areas__card reveal" data-d="1">
@@ -580,7 +623,7 @@
           </div>
           <div class="info">
             <span class="info__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><b>Service Area</b><span>San Antonio &amp; Greater South Texas</span></div>
+            <div><b>Service Area</b><span>All of Texas — Statewide Coverage</span></div>
           </div>
           <div class="info">
             <span class="info__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg></span>
@@ -660,7 +703,8 @@
         <h5>Company</h5>
         <ul>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#work">Our Work</a></li>
+          <li><a href="#projects">Commercial Projects</a></li>
+          <li><a href="#residential">Residential Projects</a></li>
           <li><a href="#team">Our Team</a></li>
           <li><a href="#why">Why Choose Us</a></li>
           <li><a href="#areas">Service Areas</a></li>

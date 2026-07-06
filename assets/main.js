@@ -59,6 +59,17 @@
     if(drawer) drawer.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", closeDrawer); });
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeDrawer(); });
 
+    /* ---- drawer "Our Work" accordion (tap to reveal project options) ---- */
+    var acc = drawer ? drawer.querySelector(".drawer__acc") : null;
+    if(acc){
+      var accPanel = document.getElementById(acc.getAttribute("aria-controls"));
+      acc.addEventListener("click", function(){
+        var expanded = acc.getAttribute("aria-expanded") === "true";
+        acc.setAttribute("aria-expanded", expanded ? "false" : "true");
+        if(accPanel) accPanel.classList.toggle("open", !expanded);
+      });
+    }
+
     /* ---- reveal on scroll ---- */
     var els = document.querySelectorAll(".reveal");
     if(reduce || !("IntersectionObserver" in window)){
@@ -117,75 +128,91 @@
       }
     }
 
-    /* ---- 3D / FX layer ---- */
-    (function initFX(){
-      var hero = document.querySelector(".hero");
+    /* (Removed decorative interactions: card tilt, magnetic buttons, hero parallax.
+       Cards use a simple, calm CSS hover lift instead.) */
 
-      // Interactive 3D effects — pointer devices only, and never under reduced motion
-      if(reduce || !window.matchMedia("(pointer:fine)").matches) return;
+    /* ---- project lightbox (click a project to view more photos) ---- */
+    (function initLightbox(){
+      var items = document.querySelectorAll(".projects .gallery__item");
+      if(!items.length) return;
 
-      // Card tilt + cursor glow
-      var tiltEls = document.querySelectorAll(".card, .gallery__item, .quote, .step, .feat");
-      tiltEls.forEach(function(el){
-        var raf = null, rect = null, MAX = 9;
-        function move(e){
-          rect = rect || el.getBoundingClientRect();
-          var px = (e.clientX - rect.left) / rect.width;
-          var py = (e.clientY - rect.top) / rect.height;
-          el.style.setProperty("--mx", (px*100).toFixed(1) + "%");
-          el.style.setProperty("--my", (py*100).toFixed(1) + "%");
-          if(raf) return;
-          raf = requestAnimationFrame(function(){
-            var rx = (0.5 - py) * MAX, ry = (px - 0.5) * MAX;
-            el.style.transform = "perspective(900px) rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg) translateZ(8px)";
-            raf = null;
-          });
-        }
-        el.addEventListener("mouseenter", function(){ rect = el.getBoundingClientRect(); el.style.transition = "transform .1s ease-out"; });
-        el.addEventListener("mousemove", move);
-        el.addEventListener("mouseleave", function(){ el.style.transition = "transform .55s var(--ease)"; el.style.transform = ""; rect = null; });
-      });
+      var lb = document.createElement("div");
+      lb.className = "lb"; lb.setAttribute("aria-hidden","true");
+      lb.innerHTML =
+        '<span class="lb__count"></span>' +
+        '<button class="lb__close" aria-label="Close">×</button>' +
+        '<button class="lb__prev" aria-label="Previous photo">‹</button>' +
+        '<button class="lb__next" aria-label="Next photo">›</button>' +
+        '<div class="lb__stage"><img alt=""><div class="lb__cap"></div></div>';
+      document.body.appendChild(lb);
+      var lbImg = lb.querySelector("img"), lbCap = lb.querySelector(".lb__cap"), lbCount = lb.querySelector(".lb__count");
+      var photos = [], idx = 0, caption = "", session = 0;
 
-      // Magnetic buttons
-      document.querySelectorAll(".btn").forEach(function(btn){
-        var raf = null;
-        btn.addEventListener("mousemove", function(e){
-          var r = btn.getBoundingClientRect();
-          var mx = e.clientX - r.left - r.width/2;
-          var my = e.clientY - r.top - r.height/2;
-          if(raf) return;
-          raf = requestAnimationFrame(function(){
-            btn.style.transform = "translate(" + (mx*0.22).toFixed(1) + "px," + (my*0.32 - 2).toFixed(1) + "px)";
-            raf = null;
-          });
-        });
-        btn.addEventListener("mouseleave", function(){ btn.style.transform = ""; });
-      });
-
-      // Hero parallax (background + content move at different depths)
-      if(hero){
-        var hbg = hero.querySelector(".hero__bg");
-        var hin = hero.querySelector(".hero__inner");
-        var orbLayer = hero.querySelector(".fx-orbs");
-        var raf3 = null, mx = 0, my = 0;
-        hero.addEventListener("mousemove", function(e){
-          var r = hero.getBoundingClientRect();
-          mx = (e.clientX - r.left) / r.width - 0.5;
-          my = (e.clientY - r.top) / r.height - 0.5;
-          if(raf3) return;
-          raf3 = requestAnimationFrame(function(){
-            if(hbg) hbg.style.transform = "scale(1.06) translate(" + (mx*-20).toFixed(1) + "px," + (my*-14).toFixed(1) + "px)";
-            if(hin) hin.style.transform = "translate(" + (mx*18).toFixed(1) + "px," + (my*12).toFixed(1) + "px)";
-            if(orbLayer) orbLayer.style.transform = "translate(" + (mx*36).toFixed(1) + "px," + (my*28).toFixed(1) + "px)";
-            raf3 = null;
-          });
-        });
-        hero.addEventListener("mouseleave", function(){
-          if(hbg) hbg.style.transform = "scale(1.06)";
-          if(hin) hin.style.transform = "";
-          if(orbLayer) orbLayer.style.transform = "";
-        });
+      function render(){
+        lbImg.src = photos[idx];
+        lbCount.textContent = (idx+1) + " / " + photos.length;
+        lbCap.textContent = caption;
+        lb.classList.toggle("lb--single", photos.length < 2);
       }
+      function openLb(list, cap){
+        photos = list.slice(); idx = 0; caption = cap;
+        render(); lb.classList.add("open"); lb.setAttribute("aria-hidden","false");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLb(){ lb.classList.remove("open"); lb.setAttribute("aria-hidden","true"); document.body.style.overflow = ""; lbImg.src = ""; }
+      function next(){ if(photos.length<2)return; idx=(idx+1)%photos.length; render(); }
+      function prev(){ if(photos.length<2)return; idx=(idx-1+photos.length)%photos.length; render(); }
+
+      items.forEach(function(it){
+        var cue = document.createElement("span"); cue.className = "project-cue"; cue.textContent = "View More";
+        it.appendChild(cue);
+        it.addEventListener("click", function(){
+          var img = it.querySelector("img"); if(!img) return;
+          var main = img.getAttribute("src");
+          var b = it.querySelector(".gallery__cap b"); var cap = b ? b.textContent : "";
+          var list = [main];
+          openLb(list, cap);
+          var mySession = ++session;
+
+          // Explicit extra photos via data-more="path1,path2"
+          var more = it.getAttribute("data-more");
+          if(more){
+            more.split(",").forEach(function(p){ p = p.trim(); if(p) photos.push(p); });
+            render(); return;
+          }
+          // Otherwise auto-discover NAME-2.jpg ... NAME-6.jpg in the same folder
+          var m = main.match(/^(.*)\.(jpg|jpeg|png|webp)$/i);
+          if(!m) return;
+          var pending = 0, extras = {};
+          for(var i = 2; i <= 6; i++){
+            (function(n){
+              pending++;
+              var url = m[1] + "-" + n + "." + m[2];
+              var probe = new Image();
+              probe.onload = function(){ extras[n] = url; done(); };
+              probe.onerror = function(){ done(); };
+              probe.src = url;
+            })(i);
+          }
+          function done(){
+            pending--;
+            if(pending !== 0 || mySession !== session) return;
+            for(var n = 2; n <= 6; n++){ if(extras[n]) photos.push(extras[n]); }
+            render();
+          }
+        });
+      });
+
+      lb.querySelector(".lb__close").addEventListener("click", closeLb);
+      lb.querySelector(".lb__next").addEventListener("click", next);
+      lb.querySelector(".lb__prev").addEventListener("click", prev);
+      lb.addEventListener("click", function(e){ if(e.target === lb) closeLb(); });
+      document.addEventListener("keydown", function(e){
+        if(!lb.classList.contains("open")) return;
+        if(e.key === "Escape") closeLb();
+        else if(e.key === "ArrowRight") next();
+        else if(e.key === "ArrowLeft") prev();
+      });
     })();
 
     /* ---- quote form ---- */

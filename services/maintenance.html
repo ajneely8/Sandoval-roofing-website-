@@ -24,7 +24,7 @@
       <nav class="nav__links" aria-label="Primary">
         <a href="../index.html#about">About</a>
         <a href="../index.html#services">Services</a>
-        <a href="../index.html#work">Our Work</a>
+        <span class="nav__item nav__item--drop"><button type="button" class="nav__drophead">Our Work</button><div class="nav__drop"><a href="../index.html#projects">Commercial Projects</a><a href="../index.html#residential">Residential Projects</a></div></span>
         <a href="../index.html#why">Why Us</a>
         <a href="../index.html#areas">Service Areas</a>
         <a href="../index.html#contact">Contact</a>
@@ -42,7 +42,11 @@
     <button class="nav__close" id="navClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     <a href="../index.html#about">About</a>
     <a href="../index.html#services">Services</a>
-    <a href="../index.html#work">Our Work</a>
+    <button type="button" class="drawer__acc" aria-expanded="false" aria-controls="drawerWork">Our Work</button>
+    <div class="drawer__panel" id="drawerWork">
+      <a href="../index.html#projects" class="drawer__sub">Commercial Projects</a>
+      <a href="../index.html#residential" class="drawer__sub">Residential Projects</a>
+    </div>
     <a href="../index.html#why">Why Us</a>
     <a href="../index.html#areas">Service Areas</a>
     <a href="../index.html#contact">Contact</a>
@@ -178,7 +182,6 @@
         <h5>Company</h5>
         <ul>
           <li><a href="../index.html#about">About Us</a></li>
-          <li><a href="../index.html#work">Our Work</a></li>
           <li><a href="../index.html#why">Why Choose Us</a></li>
           <li><a href="../index.html#areas">Service Areas</a></li>
           <li><a href="../index.html#contact">Free Estimate</a></li>
