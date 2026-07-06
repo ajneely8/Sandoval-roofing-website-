@@ -164,8 +164,11 @@
       function prev(){ if(photos.length<2)return; idx=(idx-1+photos.length)%photos.length; render(); }
 
       items.forEach(function(it){
-        var cue = document.createElement("span"); cue.className = "project-cue"; cue.textContent = "View More";
-        it.appendChild(cue);
+        var single = it.hasAttribute("data-single");
+        if(!single){
+          var cue = document.createElement("span"); cue.className = "project-cue"; cue.textContent = "View More";
+          it.appendChild(cue);
+        }
         it.addEventListener("click", function(){
           var img = it.querySelector("img"); if(!img) return;
           var main = img.getAttribute("src");
@@ -173,6 +176,7 @@
           var list = [main];
           openLb(list, cap);
           var mySession = ++session;
+          if(single) return;
 
           // Explicit extra photos via data-more="path1,path2"
           var more = it.getAttribute("data-more");
