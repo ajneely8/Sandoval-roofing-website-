@@ -149,6 +149,14 @@
       var photos = [], idx = 0, caption = "", session = 0;
 
       function render(){
+        lbImg.style.visibility = "hidden";
+        lbImg.onload = function(){
+          // cap display at ~1.9x native so low-res originals stay sharp instead of upscaling to a blur
+          var cap = 1.9;
+          lbImg.style.setProperty("--lb-mw", Math.round(lbImg.naturalWidth * cap) + "px");
+          lbImg.style.setProperty("--lb-mh", Math.round(lbImg.naturalHeight * cap) + "px");
+          lbImg.style.visibility = "visible";
+        };
         lbImg.src = photos[idx];
         lbCount.textContent = (idx+1) + " / " + photos.length;
         lbCap.textContent = caption;
