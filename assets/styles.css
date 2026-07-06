@@ -216,10 +216,12 @@ section{position:relative}
 .hero__bg::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(120deg,rgba(16,17,20,.94) 0%,rgba(22,24,28,.80) 42%,rgba(30,33,40,.55) 100%),
-    radial-gradient(120% 120% at 100% 0%,rgba(47,139,230,.24),transparent 55%);
+    linear-gradient(100deg,rgba(12,13,16,.72) 0%,rgba(14,16,20,.5) 34%,rgba(16,18,22,.24) 60%,rgba(16,18,22,0) 84%),
+    linear-gradient(0deg,rgba(12,13,16,.42) 0%,rgba(12,13,16,0) 34%);
 }
 .hero__inner{position:relative;z-index:2;max-width:760px}
+/* lighter overlay lets the video show — text-shadow keeps copy legible */
+.hero h1,.hero__sub,.hero__eyebrow{text-shadow:0 2px 14px rgba(6,8,12,.6)}
 .hero__eyebrow{
   font-family:var(--h-font);text-transform:uppercase;letter-spacing:3.5px;font-weight:500;
   font-size:.9rem;color:var(--panel);display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;
