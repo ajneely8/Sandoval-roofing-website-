@@ -361,8 +361,8 @@ section{position:relative}
 .why .lead{color:#c3d0de}
 .why__list{display:grid;gap:20px;margin-top:12px}
 .why__grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px;position:relative;z-index:1}
-.feat{display:flex;gap:18px;padding:22px;border-radius:var(--radius);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);transition:background .25s,transform .25s var(--ease)}
-.feat:hover{background:rgba(255,255,255,.09);transform:translateX(6px)}
+.feat{display:flex;gap:18px;padding:6px 2px;border-radius:0;background:transparent;border:0}
+.feat:hover{background:transparent;transform:none}
 .feat__ic{width:52px;height:52px;flex:0 0 auto;border-radius:12px;background:var(--royal);display:grid;place-items:center;color:#fff}
 .feat__ic svg{width:26px;height:26px}
 .feat h4{color:#fff;font-size:1.18rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
