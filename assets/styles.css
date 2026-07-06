@@ -370,8 +370,8 @@ section{position:relative}
 
 /* ============ PROCESS ============ */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:56px;counter-reset:step}
-.step{position:relative;padding:34px 26px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s}
-.step:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.step{position:relative;padding:6px 2px;background:transparent;border:0;border-radius:0;box-shadow:none}
+.step:hover{transform:none;box-shadow:none}
 .step__n{
   counter-increment:step;font-family:var(--h-font);font-weight:600;font-size:.82rem;
   letter-spacing:1.6px;text-transform:uppercase;
