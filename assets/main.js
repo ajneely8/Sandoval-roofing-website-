@@ -48,10 +48,11 @@
         ptick = false;
         var y = window.pageYOffset || document.documentElement.scrollTop;
         if(y > vh + 40) return; // only while the hero is on screen
-        heroBg.style.transform = "translate3d(0," + (y * 0.35) + "px,0)";
+        var p = y / vh; // 0 -> 1 across the first screen
+        heroBg.style.transform = "translate3d(0," + (y * 0.6) + "px,0) scale(" + (1 + p * 0.18) + ")";
         if(heroInner){
-          heroInner.style.transform = "translate3d(0," + (y * -0.12) + "px,0)";
-          heroInner.style.opacity = Math.max(0, 1 - (y / vh) * 1.15);
+          heroInner.style.transform = "translate3d(0," + (y * -0.3) + "px,0)";
+          heroInner.style.opacity = Math.max(0, 1 - p * 1.25);
         }
       }
       window.addEventListener("scroll", function(){
