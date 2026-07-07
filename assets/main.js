@@ -36,6 +36,30 @@
       });
     }
 
+    /* ---- hero parallax (bg lags behind; headline drifts up + fades) ---- */
+    var heroBg = document.querySelector(".hero .hero__bg");
+    var heroInner = document.querySelector(".hero .hero__inner");
+    if(heroBg && !reduce){
+      heroBg.style.willChange = "transform";
+      if(heroInner) heroInner.style.willChange = "transform, opacity";
+      var vh = window.innerHeight, ptick = false;
+      window.addEventListener("resize", function(){ vh = window.innerHeight; }, {passive:true});
+      function parallax(){
+        ptick = false;
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        if(y > vh + 40) return; // only while the hero is on screen
+        heroBg.style.transform = "translate3d(0," + (y * 0.35) + "px,0)";
+        if(heroInner){
+          heroInner.style.transform = "translate3d(0," + (y * -0.12) + "px,0)";
+          heroInner.style.opacity = Math.max(0, 1 - (y / vh) * 1.15);
+        }
+      }
+      window.addEventListener("scroll", function(){
+        if(!ptick){ requestAnimationFrame(parallax); ptick = true; }
+      }, {passive:true});
+      parallax();
+    }
+
     /* ---- mobile drawer ---- */
     var toggle = document.getElementById("navToggle");
     var drawer = document.getElementById("drawer");
