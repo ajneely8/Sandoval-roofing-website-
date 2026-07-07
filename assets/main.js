@@ -50,7 +50,7 @@
         var y = window.pageYOffset || document.documentElement.scrollTop;
         if(y > vh + 40) return; // only while the hero is on screen
         var p = y / vh; // 0 -> 1 across the first screen
-        heroBg.style.transform = "translate3d(0," + (y * 0.6) + "px,0) scale(" + (1 + p * 0.18) + ")";
+        // hero video is pinned via CSS (position:fixed); only the copy drifts + fades
         if(heroInner){
           heroInner.style.transform = "translate3d(0," + (y * -0.3) + "px,0)";
           heroInner.style.opacity = Math.max(0, 1 - p * 1.25);
