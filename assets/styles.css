@@ -226,27 +226,27 @@ section{position:relative}
 .hero__bg::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(100deg,rgba(12,13,16,.72) 0%,rgba(14,16,20,.5) 34%,rgba(16,18,22,.24) 60%,rgba(16,18,22,0) 84%),
-    linear-gradient(0deg,rgba(12,13,16,.42) 0%,rgba(12,13,16,0) 34%);
+    linear-gradient(100deg,rgba(10,11,14,.82) 0%,rgba(12,14,18,.6) 36%,rgba(16,18,22,.3) 62%,rgba(16,18,22,0) 86%),
+    linear-gradient(0deg,rgba(10,11,14,.5) 0%,rgba(12,13,16,0) 36%);
 }
 .hero__inner{position:relative;z-index:2;max-width:760px}
-/* lighter overlay lets the video show — text-shadow keeps copy legible */
-.hero h1,.hero__sub,.hero__eyebrow{text-shadow:0 2px 14px rgba(6,8,12,.6)}
+/* all hero copy is white; layered text-shadow keeps it legible over the video */
+.hero h1,.hero__sub,.hero__eyebrow{text-shadow:0 2px 4px rgba(0,0,0,.55),0 4px 20px rgba(0,0,0,.65)}
 .hero__eyebrow{
   font-family:var(--h-font);text-transform:uppercase;letter-spacing:3.5px;font-weight:500;
-  font-size:.9rem;color:var(--panel);display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;
+  font-size:.9rem;color:#fff;display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;
 }
-.hero__eyebrow::before{content:"";width:44px;height:2px;background:var(--panel)}
+.hero__eyebrow::before{content:"";width:44px;height:2px;background:#fff}
 .hero h1{
   font-size:clamp(2.35rem,7vw,5.1rem);color:#fff;text-transform:uppercase;
   letter-spacing:.5px;line-height:.98;font-weight:700;
 }
-.hero h1 .accent,.hero-title .accent{color:var(--panel)}
+.hero h1 .accent,.hero-title .accent{color:#fff}
 /* Hero headline: gentle single fade-up (no per-word gimmick) */
 .hero-title{display:inline-block}
 .hero-title .word{display:inline-block}
 @keyframes heroWordUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-.hero__sub{font-size:clamp(1.06rem,2.2vw,1.28rem);color:#dbe6f1;margin:24px 0 34px;max-width:60ch;line-height:1.6}
+.hero__sub{font-size:clamp(1.06rem,2.2vw,1.28rem);color:#fff;margin:24px 0 34px;max-width:60ch;line-height:1.6}
 .hero__actions{display:flex;flex-wrap:wrap;gap:16px}
 .hero__trust{
   display:flex;flex-wrap:wrap;gap:26px 34px;margin-top:46px;padding-top:30px;
