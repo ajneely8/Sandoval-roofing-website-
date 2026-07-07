@@ -39,6 +39,7 @@
     /* ---- hero parallax (bg lags behind; headline drifts up + fades) ---- */
     var heroBg = document.querySelector(".hero .hero__bg");
     var heroInner = document.querySelector(".hero .hero__inner");
+    var heroScroll = document.querySelector(".hero__scroll");
     if(heroBg && !reduce){
       heroBg.style.willChange = "transform";
       if(heroInner) heroInner.style.willChange = "transform, opacity";
@@ -54,6 +55,7 @@
           heroInner.style.transform = "translate3d(0," + (y * -0.3) + "px,0)";
           heroInner.style.opacity = Math.max(0, 1 - p * 1.25);
         }
+        if(heroScroll) heroScroll.style.opacity = Math.max(0, 1 - p * 5);
       }
       window.addEventListener("scroll", function(){
         if(!ptick){ requestAnimationFrame(parallax); ptick = true; }
