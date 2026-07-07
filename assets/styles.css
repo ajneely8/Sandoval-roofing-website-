@@ -330,6 +330,14 @@ section{position:relative}
 
 /* ============ SERVICES ============ */
 .services{background:var(--mist)}
+/* concrete-texture backdrop on the Services section (kept dark) */
+#services{background:#191b1f}
+#services::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:var(--concrete-fine),var(--concrete-coarse);
+  background-size:220px 220px,620px 620px;opacity:.32;
+}
+#services>.wrap{position:relative;z-index:1}
 .services__head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:52px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .card{
