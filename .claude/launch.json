@@ -4,8 +4,33 @@
     {
       "name": "static",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["--yes", "serve", "-l", "4321", "."],
-      "port": 4321
+      "runtimeArgs": ["--yes", "serve", "."],
+      "port": 4321,
+      "autoPort": true
+    },
+    {
+      "name": "oneframe",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "oneframe"],
+      "port": 5180
+    },
+    {
+      "name": "heatsafe-school",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "heatsafe-school"],
+      "port": 5195
+    },
+    {
+      "name": "skyguard",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "skyguard"],
+      "port": 5200
+    },
+    {
+      "name": "mission-control",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "mission-control"],
+      "port": 5190
     }
   ]
 }
